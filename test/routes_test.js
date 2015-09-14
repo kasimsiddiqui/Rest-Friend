@@ -4,10 +4,10 @@ var expect = chai.expect;
 chai.use(chaihttp);
 require(__dirname + '/../lib/server');
 var Router = require(__dirname + '/../lib/router');
-var utility = require(__dirname + '/../lib/utility');
+var routes = require(__dirname + '/../lib/routes');
 
 
-describe('the Utility Router', function() {
+describe('the Routes Framework', function() {
   it('should return status 200', function(done) {
     chai.request('localhost:3000')
       .status200('./')
