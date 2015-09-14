@@ -2,7 +2,7 @@ var chai = require('chai');
 var chaihttp = require('chai-http');
 var expect = chai.expect;
 chai.use(chaihttp);
-var server = require(__dirname + '/../lib/server');
+require(__dirname + '/../lib/server');
 var Router = require(__dirname + '/../lib/router');
 var utility = require(__dirname + '/../lib/utility');
 
@@ -12,8 +12,8 @@ describe('the Utility Router', function() {
     chai.request('localhost:3000')
       .status200('./')
       .end(function (err, res) {
-        expect(err).to.be.equal(null);
-        expect(res.status).to.be.equal(200);
+        expect(err).to.equal(null);
+        expect(res.status).to.equal(200);
         done();
       });
   });
@@ -21,7 +21,7 @@ describe('the Utility Router', function() {
     chai.request('localhost:3000')
       .status404('./other')
       .end(function (err, res) {
-        expect(res.status).to.be.equal(404);
+        expect(res.status).to.equal(404);
         done();
       });
   });
@@ -29,8 +29,8 @@ describe('the Utility Router', function() {
     chai.request('localhost:3000')
       .get('./')
       .end(function (err, res) {
-        expect(err).to.be.equal(null);
-        expect(res.status).to.be.equal(200);
+        expect(err).to.equal(null);
+        expect(res.status).to.equal(200);
         done();
       });
   });
@@ -38,8 +38,8 @@ describe('the Utility Router', function() {
       chai.request('localhost:3000')
         .post('./data')
         .end(function (err, res) {
-          expect(err).to.be.equal(null);
-          expect(res.status).to.be.equal(200);
+          expect(err).to.equal(null);
+          expect(res.status).to.equal(200);
           done();
         });
     });
@@ -47,8 +47,8 @@ describe('the Utility Router', function() {
     chai.request('localhost:3000')
       .put('./data')
       .end(function (err, res) {
-        expect(err).to.be.equal(null);
-        expect(res.status).to.be.equal(200);
+        expect(err).to.equal(null);
+        expect(res.status).to.equal(200);
         done();
       });
   });
@@ -56,8 +56,8 @@ describe('the Utility Router', function() {
     chai.request('localhost:3000')
       .patch('./data')
       .end(function (err, res) {
-        expect(err).to.be.equal(null);
-        expect(res.status).to.be.equal(200);
+        expect(err).to.equal(null);
+        expect(res.status).to.equal(200);
         done();
       });
   });
