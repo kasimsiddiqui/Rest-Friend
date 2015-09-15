@@ -2,7 +2,7 @@ var chai = require('chai');
 var chaihttp = require('chai-http');
 var expect = chai.expect;
 chai.use(chaihttp);
-require(__dirname + '/../lib/server');
+require(__dirname + '/server_test');
 var Router = require(__dirname + '/../lib/router');
 var routes = require(__dirname + '/../lib/routes');
 
