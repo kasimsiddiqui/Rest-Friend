@@ -25,40 +25,4 @@ describe('the Routes Framework', function() {
         done();
       });
   });
-  it('should complete a GET request', function(done) {
-    chai.request('localhost:3000')
-      .get('./')
-      .end(function (err, res) {
-        expect(err).to.equal(null);
-        expect(res.status).to.equal(200);
-        done();
-      });
-  });
-  it('should complete a POST request', function(done) {
-      chai.request('localhost:3000')
-        .post('./data')
-        .end(function (err, res) {
-          expect(err).to.equal(null);
-          expect(res.status).to.equal(200);
-          done();
-        });
-    });
-  it('should complete a PUT request', function(done) {
-    chai.request('localhost:3000')
-      .put('./data')
-      .end(function (err, res) {
-        expect(err).to.equal(null);
-        expect(res.status).to.equal(200);
-        done();
-      });
-  });
-  it('should complete a PATCH request', function(done) {
-    chai.request('localhost:3000')
-      .patch('./data')
-      .end(function (err, res) {
-        expect(err).to.equal(null);
-        expect(res.status).to.equal(200);
-        done();
-      });
-  });
 });
