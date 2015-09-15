@@ -4,7 +4,6 @@ var http = require('http');
 var port = 3000;
 var Router = require(__dirname + '/../lib/router');
 var restFriend = require(__dirname + '/../lib/routes');
-
 var router = Router();
 
 router.get('/', function(req, res){
