@@ -1,6 +1,6 @@
 {
   "name": "rest-friend",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "REST API framework using node HTTP module",
   "main": "index.js",
   "scripts": {
